@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: egorsobolev321/flask_app
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/code
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=1
